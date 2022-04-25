@@ -1,25 +1,11 @@
-package oopslab;
-
+package co;
 import java.util.Scanner;
 
 public class symmetric{
-int a[][],b[][];
-int r,c;
-void display() {
-	System.out.println("the matrix is");
-	for(int i=0;i<r;i++) {
-		for(int j=0;j<c;j++) {
-		int t=(int) a[i][j];
-		
-		}
-		}
-	
-	System.out.println("the tranpose matrix is");
-	
-}
- 
 
-public static void main(String[] args) {
+		
+		public static void main(String[] args) {
+			int m[][]=new int[5][5];
 
 
 
@@ -29,32 +15,34 @@ int r=s.nextInt();
 System.out.println("enter the coloumns of the matrix");
 int c=s.nextInt();
 System.out.println("enter the  matrix");
-symmetric obj1=new symmetric();
-obj1.display();
-
+for(int i=0;i<=r;i++) {
+	for(int j=0;j<=c;j++) {
+		m[i][j]=s.nextInt();
+	}
+	
+}
+int t[][]=new int[5][5];
 
 for(int i=0;i<r;i++) {
 for(int j=0;j<c;j++) {
-a[i][j]=s.nextInt();
+            t[j][i]=m[i][j];
 }
 }
-System.out.println("enter the transpose of matrix");
+int f=1;
 for(int i=0;i<r;i++) {
 for(int j=0;j<c;j++) {
-b[i][j]=s.nextInt();
+            if (m[i][j]!=t[i][j]) {
+            f=0;
+            }
 }
+if(f==1) {
+	System.out.println("given matrix is symmetric");
 }
-if(a[i][j]==b[i][j])
-{
-System.out.println("the matrix is symmetric");
-
+if(f==0) {
+	System.out.println("given matrix is not symmetric");
 }
-if(a[][]!=b[][])
-{
-System.out.println("the matrix not symmetric");
-
+	
 }
-
 
 
 
@@ -62,4 +50,3 @@ System.out.println("the matrix not symmetric");
 }
 
 }
-
