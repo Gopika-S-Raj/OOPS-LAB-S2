@@ -1,0 +1,53 @@
+package co3;
+
+import java.util.Scanner;
+
+class mult extends Thread{
+	public void run() {
+		for(int i=1;i<=10;i++) {
+			System.out.println(i*5);
+		}
+	}
+	
+}
+class prime extends Thread{
+	public void run() {
+		int p=0;
+		System.out.println("enter the limit");
+		
+		Scanner sc = new Scanner(System.in) ;
+		int n=sc.nextInt();
+	
+		for (int i = 1; i <= n; i++) {
+			  
+			   for (int j = 2; j <= i / 2; j++) {
+			    if (i % j == 0) {
+			     
+			     break;
+			    }
+			   }
+
+			   if (p == 0) {
+			    System.out.println(i);
+			   }
+		
+	}
+	}
+
+
+public class thread1 {
+
+	public thread1() {
+		
+	}
+
+	public void main(String[] args) {
+		mult obj1=new mult();
+		prime obj2=new prime();
+		obj1.start();
+		obj2.start();
+
+	}
+
+}
+}
