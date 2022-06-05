@@ -1,0 +1,36 @@
+package co3;
+
+import java.util.Scanner;
+
+public class exceptionpassnamae {
+
+	public exceptionpassnamae() {
+	
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in) ;
+		System.out .println("enter the name");
+		String n=sc.nextLine();
+		System.out .println("password");
+	    String p=sc.nextLine();
+		try {
+			if (n.length()< 5) {
+				System.out .println("name length can not less than 5");
+				
+			}
+			else if(p.length()<8){
+				System.out .println("password must have 8 characters");
+			}
+			else {
+				System.out .println("login successful");
+			}
+		
+			
+	}catch(Exception e){
+		System.out .println("something went wrong");
+	}
+		
+
+	}
+}
