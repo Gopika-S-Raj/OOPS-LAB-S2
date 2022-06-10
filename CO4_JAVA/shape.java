@@ -3,37 +3,44 @@ package graphics_co4;
 import java.util.Scanner;
 
 interface rectangle{
-	public void area();
+	public void area(int l,int b);
 }
 class rec implements rectangle{
-	public void area() {
-		Scanner sc = new Scanner(System.in) ;
-		System.out.println("enter the length");
-	       int l=sc.nextInt();
-	       System.out.println("enter the breadth");
-	       int b=sc.nextInt();
-	       
+	public void area(int l,int b) {
+
+		System.out.println("the area is");
+		
+		System.out.println(l*b);
+		
+		
 		
 		
 	}
 }
 interface triangle{
-	public void area1();
+	public void area1(int a,int h);
 }
 class triang implements triangle{
 
-	public void area1() {
-		System.out.println("enter the breadth");
-		Scanner sc = new Scanner(System.in) ;
-		int a=sc.nextInt();
-		System.out.println("enter the height");
-		int h=sc.nextInt();
+	public void area1(int a,int h) {
+		
 		System.out.println("the area is");
+		
 		System.out.println(0.5*a*h);
 		
 	}
 	
 	
+}
+interface circle{
+	public void area2(int r);
+}
+class circ implements circle{
+	public void area2(int r) {
+		System.out.println("the area is");
+		System.out.println(3.14*r*r);
+		
+	}
 }
 
 public class shape {
@@ -42,9 +49,10 @@ public class shape {
 	public static void main(String[] args) {
 		rec obj1=new rec();
 		triang obj2=new triang();
+		circ obj3=new circ();
 		Scanner sc = new Scanner(System.in) ;
 		int ch;
-		System.out.println("the choices are\n 1.area of rectangle\n 2.area of triangle");
+		System.out.println("the choices are\n 1.area of rectangle\n 2.area of triangle\n3.area of circle");
 		do {
 			System.out.println("enter the  choice");
 			ch=sc.nextInt();
@@ -53,12 +61,23 @@ public class shape {
 		
 			switch(ch) {
 			case 1:
-			       System.out.println("area of rectangle");
-			       obj1.area();
-			       
+			      
+			       System.out.println("enter the length");
+			       int d=sc.nextInt();
+			       System.out.println("enter the breadth");
+			       int e=sc.nextInt();
+			       obj1.area(d,e);
 			       break;
-			case 2:System.out.println("area of triangle");
-			       obj2.area1();
+			case 2:
+			       System.out.println("enter the breadth");
+		           int f=sc.nextInt();
+		           System.out.println("enter the height");
+		          int g=sc.nextInt();
+			       obj2.area1(f,g);
+			       break;
+			case 3:System.out.println("enter the radius");
+			       int h=sc.nextInt();
+			       obj3.area2(h);
 			       break;
 		    default:System.out.println("invalid option");
 		}
