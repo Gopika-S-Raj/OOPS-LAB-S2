@@ -9,7 +9,7 @@ interface addition{
 }
 class  addi implements addition{
 	public void perform1(int a,int b) {
-		System.out.println("the addition result is" +a+b);
+		System.out.println("the addition result is" +(a+b));
 		
 		
 	}
@@ -19,7 +19,7 @@ interface subtraction {
 }
 class sub implements subtraction{
 	public void perform2(int c,int d) {
-		System.out.println("the subtraction result is" +c+d);
+		System.out.println("the subtraction result is" +(c-d));
 	}
 }
 interface multiplication{
