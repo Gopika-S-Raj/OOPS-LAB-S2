@@ -3,7 +3,7 @@ package co3;
 import java.util.Scanner;
 
 class mult extends Thread{
-	public void run() {
+	public synchronized void run() {
 		for(int i=1;i<=10;i++) {
 			System.out.println(i*5);
 		}
@@ -11,7 +11,7 @@ class mult extends Thread{
 	
 }
 class prime extends Thread{
-	public void run() {
+	public synchronized void run() {
 		int p=0;
 		System.out.println("enter the limit");
 		
